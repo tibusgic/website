@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez-nous pour réserver votre séjour dans nos hébergements de charme. Formulaire de contact, coordonnées et plan d'accès.">
+    <meta name="keywords" content="contact, réservation, hébergement, gîte, chambre d'hôtes, plan d'accès">
+    
+    <title>Contact & Réservations - Chaist Jean</title>
+    
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles additionnels pour la page contact -->
+    <style>
+        .field-error {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        .form-input.error,
+        .form-textarea.error {
+            border-color: #e74c3c;
+        }
+        
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: var(--primary-beige);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .map-placeholder {
+            text-align: center;
+            color: var(--text-light);
+        }
+        
+        .contact-info-card {
+            background: var(--white-off);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            height: fit-content;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: var(--transition-smooth);
+        }
+        
+        .contact-method:hover {
+            background: var(--primary-beige);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .faq-item {
+            background: var(--white-off);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: var(--white-off);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            color: var(--primary-brown);
+            transition: var(--transition-smooth);
+        }
+        
+        .faq-question:hover {
+            background: var(--primary-beige);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: var(--white-off);
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation - Généré dynamiquement par navigation.js -->
+    <!-- Le contenu sera injecté ici par le script navigation.js -->
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./assets/images/contact-hero.jpg') center/cover;">
+        <div class="hero-content container">
+            <h1 class="hero-title">Contactez-nous</h1>
+            <p class="hero-subtitle">
+                N'hésitez pas à nous contacter, nous ne manquerons pas de répondre à chaque mail envoyé.
+            </p>
+        </div>
+    </section>
+
+    <!-- Navigation de retour -->
+    <section style="padding: 20px 0; background: var(--primary-beige);">
+        <div class="container">
+            <nav style="font-size: 0.9rem; color: var(--text-light);">
+                <a href="index.html" style="color: var(--text-light);">Accueil</a> 
+                <span style="margin: 0 10px;">›</span> 
+                <span style="color: var(--primary-brown);">Contact</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Section Formulaire & Infos Contact -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 600px; margin: 0 auto;">
+                <!-- Formulaire de Contact -->
+                <div class="scroll-reveal">
+                    <form class="contact-form" id="contactForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="form-group">
+                                <label for="prenom" class="form-label">Prénom</label>
+                                <input type="text" id="prenom" name="prenom" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="nom" class="form-label">Nom de famille</label>
+                                <input type="text" id="nom" name="nom" class="form-input">
+                            </div>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" id="email" name="email" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone" class="form-label">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone" class="form-input">
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Rédigez votre message ici</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" 
+                                    placeholder="Votre message..."></textarea>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 30px;">
+                            <button type="submit" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">
+                                Envoyer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Section Coordonnées -->
+    <section class="section" style="background: var(--primary-beige);">
+        <div class="container">
+            <h2 class="section-title">Nos Coordonnées</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto;">
+                <div style="text-align: center; padding: 30px; background: var(--white-off); border-radius: 15px; box-shadow: var(--shadow-soft);">
+                    <div style="width: 80px; height: 80px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 2rem;">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); color: var(--primary-brown); margin-bottom: 10px;">
+                        Téléphone
+                    </h3>
+                    <p style="color: var(--text-dark); font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">
+                        +33 4 79 XX XX XX
+                    </p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">
+                        Disponible 9h-19h, 7j/7
+                    </p>
+                </div>
+                
+                <div style="text-align: center; padding: 30px; background: var(--white-off); border-radius: 15px; box-shadow: var(--shadow-soft);">
+                    <div style="width: 80px; height: 80px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 2rem;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); color: var(--primary-brown); margin-bottom: 10px;">
+                        Email
+                    </h3>
+                    <p style="color: var(--text-dark); font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">
+                        contact@chaistjean.fr
+                    </p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">
+                        Réponse sous 24h garantie
+                    </p>
+                </div>
+                
+                <div style="text-align: center; padding: 30px; background: var(--white-off); border-radius: 15px; box-shadow: var(--shadow-soft);">
+                    <div style="width: 80px; height: 80px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 2rem;">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); color: var(--primary-brown); margin-bottom: 10px;">
+                        Adresse
+                    </h3>
+                    <p style="color: var(--text-dark); font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">
+                        123 Route de la Montagne
+                    </p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">
+                        73000 Chambéry, France
+                    </p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réseaux Sociaux -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 style="font-family: var(--font-heading); color: var(--primary-brown); margin-bottom: 20px;">
+                    Suivez-nous sur les Réseaux
+                </h2>
+                <p style="color: var(--text-light); margin-bottom: 40px; font-size: 1.1rem;">
+                    Découvrez nos dernières actualités, photos des hébergements et témoignages de nos hôtes
+                </p>
+                
+                <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.facebook.com/profile.php?id=100013538945513" style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 25px; background: var(--primary-beige); border-radius: 15px; transition: var(--transition-smooth); min-width: 150px;">
+                        <i class="fab fa-facebook" style="font-size: 3rem; color: #1877f2;"></i>
+                        <span style="color: var(--primary-brown); font-weight: 600;">Facebook</span>
+                        <small style="color: var(--text-light);">Photos & actualités</small>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/tata.carole.en.cuisine/" style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 25px; background: var(--primary-beige); border-radius: 15px; transition: var(--transition-smooth); min-width: 150px;">
+                        <i class="fab fa-instagram" style="font-size: 3rem; color: #e4405f;"></i>
+                        <span style="color: var(--primary-brown); font-weight: 600;">Instagram</span>
+                        <small style="color: var(--text-light);">Stories & coulisses</small>
+                    </a>
+                    
+                    <a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 25px; background: var(--primary-beige); border-radius: 15px; transition: var(--transition-smooth); min-width: 150px;">
+                        <i class="fab fa-linkedin" style="font-size: 3rem; color: #00af87;"></i>
+                        <span style="color: var(--primary-brown); font-weight: 600;">LinkedIn</span>
+                        <small style="color: var(--text-light);">Actualités & Réseau professionnel</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chaist Jean</h3>
+                    <p>Hébergements de charme depuis 2015</p>
+                    <p>Une expérience unique dans un cadre exceptionnel</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nos Hébergements</h3>
+                    <a href="chalet.html">Le Chalet</a>
+                    <a href="loft.html">Le Loft</a>
+                    <a href="studio.html">Le Studio</a>
+                    <a href="presentation.html">Présentation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Route de la Montagne<br>73000 Chambéry</p>
+                    <p><i class="fas fa-phone"></i> +33 4 79 XX XX XX</p>
+                    <p><i class="fas fa-envelope"></i> contact@chaistjean.fr</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div style="display: flex; gap: 15px; font-size: 1.5rem;">
+                        <a href="#" style="color: var(--primary-beige);"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--primary-beige);"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--primary-beige);"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chaist Jean. Tous droits réservés. | 
+                   <a href="#" style="color: var(--primary-beige);">Mentions légales</a> | 
+                   <a href="#" style="color: var(--primary-beige);">Politique de confidentialité</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/navigation.js"></script>
+    
+    <!-- Script spécifique pour la page contact -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestion du formulaire de contact
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Ici vous pourrez ajouter la logique d'envoi du formulaire
+                    alert('Merci pour votre message ! Nous vous répondrons rapidement.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
