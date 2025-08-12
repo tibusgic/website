@@ -15,27 +15,55 @@
 <body>
     <!-- Header & Navigation - Généré dynamiquement par navigation.js -->
     <!-- Le contenu sera injecté ici par le script navigation.js -->
-
-    <!-- Hero Section -->
-    <section class="hero" style="height: 70vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./assets/images/presentation-hero.jpg') center/cover;">
-        <div class="hero-content container">
-            <h1 class="hero-title">Chaist Jean</h1>
-            <p class="hero-subtitle">
-                Chambres d'hôtes et gîtes à Saint-Jean-de-Boiseau
-            </p>
+<!-- Hero Section du Loft -->
+    <section class="hero" style="height: 80vh; position: relative; background: linear-gradient(135deg, #f8f6f3 0%, #f1ede7 50%, #ebe5dd 100%); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <!-- Texture subtile en arrière-plan -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: 
+            radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(218, 165, 32, 0.02) 0%, transparent 50%),
+            linear-gradient(90deg, transparent 0%, rgba(139, 69, 19, 0.01) 50%, transparent 100%);
+            background-size: 400px 400px, 600px 600px, 100% 2px;
+            background-position: 0 0, 100px 100px, 0 60%;"></div>
+        
+        <!-- Éléments géométriques minimalistes -->
+        <div style="position: absolute; top: 20%; right: 10%; width: 300px; height: 1px; background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.1), transparent); transform: rotate(15deg);"></div>
+        <div style="position: absolute; bottom: 30%; left: 15%; width: 200px; height: 1px; background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.08), transparent); transform: rotate(-20deg);"></div>
+        
+        <!-- Formes géométriques discrètes -->
+        <div style="position: absolute; top: 15%; left: 20%; width: 80px; height: 80px; border: 1px solid rgba(139, 69, 19, 0.06); transform: rotate(45deg);"></div>
+        <div style="position: absolute; bottom: 25%; right: 25%; width: 60px; height: 60px; border: 1px solid rgba(218, 165, 32, 0.08); transform: rotate(30deg);"></div>
+        
+        <!-- Contenu Hero élégant et sobre -->
+        <div class="hero-content container" style="text-align: center; position: relative; z-index: 10;">
+            <div style="background: rgba(255, 255, 255, 0.7); border-radius: 25px; padding: 70px 50px; max-width: 650px; margin: 0 auto; position: relative; backdrop-filter: blur(10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08), 0 1px 0 rgba(255,255,255,0.8) inset; border: 1px solid rgba(255,255,255,0.3);">
+                
+                <!-- Accent doré subtil sur le bord -->
+                <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #DAA520, transparent); border-radius: 3px;"></div>
+                
+                <h1 style="font-size: 3.8rem; margin-bottom: 25px; color: #2C1810; font-family: 'Georgia', serif; font-weight: 400; letter-spacing: 1px; margin-top: 10px;">
+                    Chai Saint Jean
+                </h1>
+                <div style="width: 60px; height: 2px; background: #DAA520; margin: 0 auto 30px; opacity: 0.6;"></div>
+                <p style="font-size: 1.3rem; margin-bottom: 0; color: #5d4e42; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.6; font-weight: 300;">
+                    Chambres d'hôtes et gîtes<br>
+                    <span style="color: #8B4513; font-weight: 400;">à Saint-Jean-de-Boiseau</span>
+                </p>
+                
+                <!-- Détail architectural minimaliste -->
+                <div style="margin-top: 40px; display: flex; justify-content: center; align-items: center; gap: 20px; opacity: 0.4;">
+                    <div style="width: 30px; height: 1px; background: #8B4513;"></div>
+                    <div style="width: 6px; height: 6px; border: 1px solid #8B4513; transform: rotate(45deg);"></div>
+                    <div style="width: 30px; height: 1px; background: #8B4513;"></div>
+                </div>
+            </div>
         </div>
+        
+        <!-- Ombre douce en bas -->
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.03) 100%); pointer-events: none;"></div>
     </section>
 
-    <!-- Navigation de retour -->
-    <section style="padding: 20px 0; background: var(--primary-beige);">
-        <div class="container">
-            <nav style="font-size: 0.9rem; color: var(--text-light);">
-                <a href="index.html" style="color: var(--text-light);">Accueil</a> 
-                <span style="margin: 0 10px;">›</span> 
-                <span style="color: var(--primary-brown);">Présentation</span>
-            </nav>
-        </div>
-    </section>
+
+
 
     <!-- Section Présentation Principale -->
     <section class="section">
@@ -318,6 +346,106 @@
         </div>
     </section>
 
+<!-- Section Localisation -->
+    <section class="section" style="background: var(--white-off);">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Notre Localisation</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px;">
+                <!-- Informations de localisation -->
+                <div class="scroll-reveal">
+                    <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--primary-brown); margin-bottom: 25px;">
+                        Saint-Jean-de-Boiseau
+                    </h3>
+                    <p style="color: var(--text-dark); line-height: 1.8; font-size: 1.1rem; margin-bottom: 25px;">
+                        Situé en <strong>Loire-Atlantique</strong>, notre établissement bénéficie d'une position idéale 
+                        entre <strong>Nantes</strong> et l'<strong>océan Atlantique</strong>. Facilement accessible depuis 
+                        l'aéroport Nantes Atlantique en seulement <strong>15 minutes</strong>.
+                    </p>
+                    
+                    <!-- Informations pratiques -->
+                    <div style="display: grid; gap: 15px;">
+                        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--primary-beige); border-radius: 10px;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                            <div>
+                                <strong style="color: var(--primary-brown);">Adresse</strong><br>
+                                <span style="color: var(--text-dark);">Saint-Jean-de-Boiseau, 44640 Loire-Atlantique</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--primary-beige); border-radius: 10px;">
+                            <i class="fas fa-plane" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                            <div>
+                                <strong style="color: var(--primary-brown);">Aéroport</strong><br>
+                                <span style="color: var(--text-dark);">Nantes Atlantique - 15 min</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--primary-beige); border-radius: 10px;">
+                            <i class="fas fa-city" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                            <div>
+                                <strong style="color: var(--primary-brown);">Centre-ville de Nantes</strong><br>
+                                <span style="color: var(--text-dark);">20 minutes en voiture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carte Google Maps -->
+                <div class="scroll-reveal">
+                    <div style="border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-medium); height: 400px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7986.505118193162!2d-1.7084798206681293!3d47.19211056812114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48059588f377d1b7%3A0x5502b62ce2c1cbc8!2sChai%20Saint%20Jean!5e1!3m2!1sfr!2sfr!4v1755000582853!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="https://maps.google.com/?q=Saint-Jean-de-Boiseau,France" 
+                           target="_blank" 
+                           class="btn btn-outline" 
+                           style="border-color: var(--primary-brown); color: var(--primary-brown);">
+                            <i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>
+                            Ouvrir dans Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Informations d'accès -->
+            <div class="scroll-reveal" style="background: var(--primary-beige); padding: 40px; border-radius: 20px;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--primary-brown); margin-bottom: 30px; text-align: center;">
+                    Comment nous rejoindre ?
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-car" style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--primary-brown); margin-bottom: 10px;">En Voiture</h4>
+                        <p style="color: var(--text-dark); font-size: 0.95rem;">
+                            Sortie "Boiseau Indret" depuis le périphérique nantais.<br>
+                            Possibilité d'utiliser le bac d'Indret depuis le nord Loire.
+                        </p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <i class="fas fa-bus" style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--primary-brown); margin-bottom: 10px;">Transport Public</h4>
+                        <p style="color: var(--text-dark); font-size: 0.95rem;">
+                            Ligne TAN avec arrêt de bus à 40m.<br>
+                            Accès direct au centre de Nantes.
+                        </p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <i class="fas fa-bicycle" style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--primary-brown); margin-bottom: 10px;">À Vélo</h4>
+                        <p style="color: var(--text-dark); font-size: 0.95rem;">
+                            Sur le trajet de la Loire à Vélo.<br>
+                            Itinéraire cyclable sécurisé et balisé.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
     <!-- CTA -->
     <section class="section" style="background: linear-gradient(135deg, var(--primary-brown), var(--accent-copper)); color: var(--white-off); text-align: center;">
         <div class="container">
@@ -339,49 +467,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Chaist Jean</h3>
-                    <p>Chambres d'hôtes et Gîtes depuis 2015</p>
-                    <p>Saint-Jean-de-Boiseau, entre Loire et océan</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Nos Hébergements</h3>
-                    <a href="chalet.html">Le Chalet</a>
-                    <a href="loft.html">Le Loft</a>
-                    <a href="studio.html">Le Studio</a>
-                    <a href="presentation.html">Présentation</a>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Saint-Jean-de-Boiseau<br>44640 Loire-Atlantique</p>
-                    <p><i class="fas fa-phone"></i> +33 4 79 XX XX XX</p>
-                    <p><i class="fas fa-envelope"></i> contact@chaistjean.fr</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Suivez-nous</h3>
-                    <div style="display: flex; gap: 15px; font-size: 1.5rem;">
-                        <a href="#" style="color: var(--primary-beige);"><i class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: var(--primary-beige);"><i class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: var(--primary-beige);"><i class="fab fa-tripadvisor"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Chaist Jean. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer - Généré dynamiquement par footer.js -->
+    <!-- Le contenu sera injecté ici par le script footer.js -->
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/navigation.js"></script>
+    <script src="./assets/js/footer.js"></script>
     
     <!-- Script pour le carrousel d'images avec défilement automatique -->
     <script>

@@ -387,9 +387,71 @@
         </div>
     </section>
 
+    <!-- Section Localisation -->
+    <section class="section" style="background: var(--white-off);">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Notre Localisation</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px;">
+                <!-- Informations de localisation -->
+                <div class="scroll-reveal">
+                    <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--primary-brown); margin-bottom: 25px;">
+                        Saint-Jean-de-Boiseau
+                    </h3>
+                    <p style="color: var(--text-dark); line-height: 1.8; font-size: 1.1rem; margin-bottom: 25px;">
+                        Situé en <strong>Loire-Atlantique</strong>, notre établissement bénéficie d'une position idéale 
+                        entre <strong>Nantes</strong> et l'<strong>océan Atlantique</strong>. Facilement accessible depuis 
+                        l'aéroport Nantes Atlantique en seulement <strong>15 minutes</strong>.
+                    </p>
+                    
+                    <!-- Informations pratiques -->
+                    <div style="display: grid; gap: 15px;">
+                        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--primary-beige); border-radius: 10px;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                            <div>
+                                <strong style="color: var(--primary-brown);">Adresse</strong><br>
+                                <span style="color: var(--text-dark);">Saint-Jean-de-Boiseau, 44640 Loire-Atlantique</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--primary-beige); border-radius: 10px;">
+                            <i class="fas fa-plane" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                            <div>
+                                <strong style="color: var(--primary-brown);">Aéroport</strong><br>
+                                <span style="color: var(--text-dark);">Nantes Atlantique - 15 min</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--primary-beige); border-radius: 10px;">
+                            <i class="fas fa-city" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                            <div>
+                                <strong style="color: var(--primary-brown);">Centre-ville de Nantes</strong><br>
+                                <span style="color: var(--text-dark);">20 minutes en voiture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carte Google Maps -->
+                <div class="scroll-reveal">
+                    <div style="border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-medium); height: 400px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7986.505118193162!2d-1.7084798206681293!3d47.19211056812114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48059588f377d1b7%3A0x5502b62ce2c1cbc8!2sChai%20Saint%20Jean!5e1!3m2!1sfr!2sfr!4v1755000582853!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="https://maps.google.com/?q=Saint-Jean-de-Boiseau,France" 
+                           target="_blank" 
+                           class="btn btn-outline" 
+                           style="border-color: var(--primary-brown); color: var(--primary-brown);">
+                            <i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>
+                            Ouvrir dans Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-    <!-- Section DIRECTIONS -->
+<!-- Section DIRECTIONS -->
     <section class="section" style="background: var(--primary-beige);">
         <div class="container">
             <h2 class="section-title scroll-reveal">DIRECTIONS</h2>
@@ -419,15 +481,16 @@
                         Une ligne de bus <strong>Transport Agglomération Nantais</strong> bus (arrêt de bus à 40m) accéder au Cœur de la ville.
                     </p>
                     <p style="color: var(--text-dark); line-height: 1.6; margin-bottom: 15px;">
-                        <strong>L'Aéroport Nantes Atlantique</strong> se trouve à <strong>15 minutes</strong> du Chalet.
+                        <strong>L'Aéroport Nantes Atlantique</strong> se trouve à <strong>15 minutes</strong> du Chai.
                     </p>
                     <p style="color: var(--text-dark); line-height: 1.6;">
-                        Le Chalet est situé sur le <strong>trajet de la Loire à vélos</strong>.
+                        Le Chai est situé sur le <strong>trajet de la Loire à vélos</strong>.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Section Sites proches à visiter -->
     <section class="section">
@@ -470,56 +533,13 @@
         </div>
     </section>    
     
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Chaist Jean</h3>
-                    <p>Hébergements de charme à Saint-Jean-de-Boiseau</p>
-                    <p>Piscine chauffée • SPA • Entrées indépendantes</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Nos Hébergements</h3>
-                    <a href="chalet.html">F2 Coquelicot</a>
-                    <a href="studio.html">F2 Camélia</a>
-                    <a href="loft.html">Le Loft</a>
-                    <a href="presentation.html">Présentation</a>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Saint-Jean-de-Boiseau<br>Loire-Atlantique (44)</p>
-                    <p><i class="fas fa-phone"></i> +33 4 79 XX XX XX</p>
-                    <p><i class="fas fa-envelope"></i> contact@chaistjean.fr</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Suivez-nous</h3>
-                    <div style="display: flex; gap: 15px; font-size: 1.5rem;">
-                        <a href="#" style="color: var(--primary-beige); transition: var(--transition-smooth);">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" style="color: var(--primary-beige); transition: var(--transition-smooth);">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" style="color: var(--primary-beige); transition: var(--transition-smooth);">
-                            <i class="fab fa-tripadvisor"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Chaist Jean. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer - Généré dynamiquement par footer.js -->
+    <!-- Le contenu sera injecté ici par le script footer.js -->
 
     <!-- JavaScript -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/navigation.js"></script>
+    <script src="./assets/js/footer.js"></script>
     
     <!-- Script du carrousel de la galerie -->
     <script>
